@@ -1,0 +1,32 @@
+{
+  "name": "pwss",
+  "version": "1.0.0",
+  "description": "Physical Weakness Scoring System (PWSS): a deterministic severity score for findings of physical security weaknesses.",
+  "keywords": ["physical-security", "scoring", "severity", "pwr", "red-team", "risk"],
+  "license": "(MIT AND CC-BY-4.0)",
+  "type": "module",
+  "main": "./src/pwss.mjs",
+  "types": "./src/pwss.d.mts",
+  "exports": {
+    ".": {
+      "types": "./src/pwss.d.mts",
+      "default": "./src/pwss.mjs"
+    }
+  },
+  "files": [
+    "src",
+    "SPECIFICATION.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwr-security/pwss.git"
+  },
+  "homepage": "https://pwr-security.org/scoring"
+}

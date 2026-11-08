@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "note": "Expected values were computed by hand from the specification, not by the reference implementation.",
+  "cases": [
+    { "name": "Window of a vital server room, no detection", "vector": "PWSS:1.0/AR:N/EF:L/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C", "score": 10.0, "severity": "Critical" },
+    { "name": "Tailgating into an open space", "vector": "PWSS:1.0/AR:N/EF:T/OP:C/DR:L/AS:L/CF:L/IN:N/AV:N/SF:N/SC:C", "score": 2.0, "severity": "Low" },
+    { "name": "Low-value chemical store, danger to life", "vector": "PWSS:1.0/AR:V/EF:L/OP:A/DR:L/AS:L/CF:N/IN:N/AV:L/SF:D/SC:C", "score": 8.5, "severity": "Critical" },
+    { "name": "Weakness stopped in time on a high-value asset", "vector": "PWSS:1.0/AR:V/EF:M/OP:C/DR:S/AS:H/CF:L/IN:N/AV:N/SF:N/SC:C", "score": 2.0, "severity": "Low" },
+    { "name": "No impact on assets or persons", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:V/CF:N/IN:N/AV:N/SF:N/SC:W", "score": 0.0, "severity": "None" },
+    { "name": "Low-value asset opening the whole site", "vector": "PWSS:1.0/AR:S/EF:M/OP:A/DR:L/AS:L/CF:L/IN:L/AV:N/SF:N/SC:W", "score": 6.5, "severity": "High" },
+    { "name": "High-value asset, two severe impacts", "vector": "PWSS:1.0/AR:N/EF:M/OP:A/DR:U/AS:H/CF:S/IN:S/AV:N/SF:N/SC:C", "score": 7.5, "severity": "High" },
+    { "name": "Vital asset, severe, stopped in time", "vector": "PWSS:1.0/AR:V/EF:L/OP:C/DR:S/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C", "score": 6.5, "severity": "High" },
+    { "name": "Vital asset, very unlikely", "vector": "PWSS:1.0/AR:P/EF:H/OP:R/DR:S/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C", "score": 3.0, "severity": "Medium" },
+    { "name": "Injury possible, no asset impact", "vector": "PWSS:1.0/AR:S/EF:L/OP:A/DR:L/AS:M/CF:N/IN:N/AV:N/SF:I/SC:C", "score": 3.5, "severity": "Medium" },
+    { "name": "Moderate asset, adjacent areas", "vector": "PWSS:1.0/AR:N/EF:L/OP:C/DR:L/AS:M/CF:L/IN:L/AV:N/SF:N/SC:A", "score": 3.5, "severity": "Medium" },
+    { "name": "High-value asset, one severe impact", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:H/CF:S/IN:N/AV:N/SF:N/SC:C", "score": 7.5, "severity": "High" },
+    { "name": "Maximum", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:V/CF:S/IN:S/AV:S/SF:D/SC:W", "score": 10.0, "severity": "Critical" },
+    { "name": "Minimum with an impact", "vector": "PWSS:1.0/AR:P/EF:H/OP:R/DR:S/AS:L/CF:L/IN:N/AV:N/SF:N/SC:C", "score": 0.5, "severity": "Low" },
+    { "name": "Low-value asset, all severe, contained: capped at Medium", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:L/CF:S/IN:S/AV:S/SF:N/SC:C", "score": 4.5, "severity": "Medium" },
+    { "name": "Low-value asset, severe, whole site: lifted to High, not Critical", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:L/CF:S/IN:N/AV:N/SF:N/SC:W", "score": 7.5, "severity": "High" },
+    { "name": "Moderate asset, all severe, whole site: not Critical", "vector": "PWSS:1.0/AR:N/EF:T/OP:A/DR:U/AS:M/CF:S/IN:S/AV:N/SF:N/SC:W", "score": 7.5, "severity": "High" }
+  ],
+  "invalid": [
+    "PWSS:0.1/AR:N/EF:L/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C",
+    "PWSS:1.0/AR:N/EF:L/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N",
+    "PWSS:1.0/EF:L/AR:N/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C",
+    "PWSS:1.0/AR:X/EF:L/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C",
+    "PWSS:1.0/AR:N/EF:L/OP:A/DR:U/AS:V/CF:S/IN:N/AV:N/SF:N/SC:C/XX:1",
+    ""
+  ]
+}
